@@ -19,6 +19,54 @@
 #meydenCinema360 .m360controls{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;background:#11151c;padding:14px 16px}#meydenCinema360 button{border:1px solid #ffffff35;border-radius:12px;padding:10px 14px;background:#ffffff0b;color:#fff;font-weight:800;cursor:pointer}#meydenCinema360 button:hover,#meydenCinema360 button:focus-visible{border-color:#ff8b3f}#meydenCinema360 button.m360primary{background:#ef670d;border-color:#fb883c}#meydenCinema360 .m360bar{height:5px;background:#ffffff17}#meydenCinema360 #m360fill{height:100%;background:#ff7b2c;width:0;transition:width .15s}#meydenCinema360 .m360chapters{display:grid;grid-template-columns:repeat(7,minmax(130px,1fr));overflow:auto;gap:8px;padding:12px 0}#meydenCinema360 .m360chapters button{text-align:left;font-size:12px;white-space:normal;min-height:62px}#meydenCinema360 .m360chapters button[aria-current=true]{border-color:#ff883d;background:#f2630a30}#meydenCinema360 .m360hint{color:#aab3c0;font-size:12px;margin:8px 0}#meydenCinema360 .m360intro{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:13px}
 @media(max-width:650px){#meydenCinema360 .m360screen{min-height:410px;aspect-ratio:auto;padding:25px}#meydenCinema360 .m360subtitle{max-width:92%}#meydenCinema360 .m360controls{justify-content:center}#meydenCinema360 .m360screen:before{width:65vw}}@media(prefers-reduced-motion:reduce){#meydenCinema360 .m360screen:before{animation:none}}
 </style>
+<style id="meyden-guide-av-v27-css">
+@media(max-width:760px){
+#meyden-floating-cart{left:12px!important;right:auto!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important}
+#meyden-floating-cart .mf-panel{left:0!important;right:auto!important;bottom:58px!important;max-height:55vh!important}
+#meyden-ux-guide{right:12px!important;left:auto!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important}
+#meyden-ux-guide .guide-content{right:0!important;left:auto!important;bottom:58px!important;width:min(94vw,540px)!important;max-height:68dvh!important}
+#meyden-return-os-bar{position:relative!important;inset:auto!important;z-index:5!important}
+#meyden-return-os-button{max-width:100%;white-space:normal!important}
+#meyden-department-basket-v1,#meyden-floating-cart .mf-toggle,#meyden-ux-guide .guide-toggle{max-width:calc(100vw - 24px)}
+nav,#nav,.tabs,.nav{scrollbar-width:thin}
+nav button,nav a,#nav button,.tabs .tab,.nav button{white-space:nowrap}
+}
+#meyden-ux-guide .guide-content{width:min(580px,calc(100vw - 28px));max-height:75dvh;overflow:auto}
+#meyden-ux-guide .meyden-av-host{margin:12px 0 8px;max-height:48dvh;overflow:auto;border-radius:12px}
+#meyden-ux-guide .meyden-av-host > *{width:100%;max-width:100%;margin:0!important}
+#meyden-ux-guide .meyden-av-host .screen,#meyden-ux-guide .meyden-av-host .tutorial-stage{min-height:150px;max-height:35dvh;overflow:auto}
+#meyden-ux-guide .meyden-av-host .controlbar{flex-wrap:wrap}
+#meyden-ux-guide .meyden-av-host button{max-width:100%}
+#meyden-ux-guide .meyden-av-hint{font-size:12px;color:#dde7ef}
+</style>
+<style id="meyden-mobile-home-v28-css">
+#meyden-welcome-v28{padding:22px 0 12px;display:grid;grid-template-columns:minmax(160px,280px) 1fr;gap:22px;align-items:center}
+#meyden-welcome-v28 img{width:100%;max-height:390px;object-fit:contain;border-radius:14px}
+#meyden-welcome-v28 h1{font-size:clamp(24px,4.5vw,43px);line-height:1.15;margin:8px 0}
+#meyden-welcome-v28 p{color:#d1d5db}
+#meyden-mobile-nav-toggle{display:none;background:#f2630a;color:#fff;border:0;border-radius:10px;padding:11px 16px;font-weight:800}
+@media(max-width:760px){
+#meyden-welcome-v28{grid-template-columns:1fr;text-align:center;padding-top:15px}
+#meyden-welcome-v28 .poster{max-width:260px;margin:0 auto}
+#meyden-mobile-nav-toggle{display:block;position:relative;z-index:20}
+header.top .wrap.nav{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important}
+header.top .brand{min-width:0!important;max-width:calc(100% - 115px)!important;flex:1 1 auto!important}
+header.top .brand img{width:44px!important;height:44px!important;min-width:44px!important;object-fit:contain!important}
+header.top .brand span{font-size:14px!important;min-width:0!important}
+header.top nav.tabs{display:none!important;position:static!important;width:100%!important;max-height:min(65vh,480px)!important;overflow-y:auto!important;overflow-x:hidden!important;flex-direction:column!important;align-items:stretch!important;padding:10px!important;white-space:normal!important}
+header.top nav.tabs.meyden-nav-open{display:flex!important}
+header.top nav.tabs .tab{display:block!important;width:100%!important;text-align:left!important;white-space:normal!important;padding:10px 12px!important}
+#meyden-floating-cart,#meyden-ux-guide{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important}
+main{padding-bottom:100px!important}
+#meydenDepartementsOfficiels .card{padding:17px!important}
+#meydenDepartementsOfficiels .grid{gap:10px!important}
+}
+</style>
+<style id="meyden-top-actions-v30">#meyden-top-actions-v30{display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 12px;background:#131a21;flex-wrap:wrap}#meyden-top-actions-v30 a,#meyden-top-actions-v30 button{border:1px solid #f47b2b;border-radius:10px;padding:10px 13px;color:#fff;background:#2a3540;text-decoration:none;font:700 14px system-ui;cursor:pointer}@media(max-width:600px){#meyden-top-actions-v30{justify-content:space-between}#meyden-top-actions-v30 a,#meyden-top-actions-v30 button{flex:1;text-align:center;font-size:12px}}</style>
+<style id="meyden-floating-cart-style">
+#meyden-floating-cart{position:fixed;right:16px;bottom:22px;z-index:1000001;font:14px system-ui,Arial,sans-serif}#meyden-floating-cart button{cursor:pointer}#meyden-floating-cart .mf-toggle{border:2px solid #ffb276;border-radius:40px;background:#ea741f;color:white;padding:13px 17px;font-size:16px;font-weight:800;box-shadow:0 6px 24px #000a}#meyden-floating-cart .mf-panel{display:none;position:absolute;right:0;bottom:66px;width:min(340px,calc(100vw - 30px));max-height:60vh;overflow:auto;border:1px solid #e97520;border-radius:16px;background:#111b25;color:#fff;box-shadow:0 14px 40px #000c;padding:16px}#meyden-floating-cart .mf-panel.open{display:block}#meyden-floating-cart .mf-row{border-bottom:1px solid #40505c;padding:9px 0;line-height:1.5}#meyden-floating-cart .mf-cta{background:#ea741f;color:white;border:0;border-radius:9px;padding:11px 13px;font-weight:800;margin-top:12px;width:100%}#meyden-floating-cart .mf-muted{font-size:12px;color:#d0d9df}
+</style>
+<style id="meyden-ux-mobile-guide-v26">html,body{max-width:100%;overflow-x:clip}*,*::before,*::after{box-sizing:border-box}nav,#nav,.tabs,.nav{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}nav button,nav a,#nav button,.tabs .tab,.nav button{flex-shrink:0}img,video,iframe,canvas{max-width:100%}input,select,textarea{max-width:100%;min-width:0}#meyden-floating-cart{bottom:calc(15px + env(safe-area-inset-bottom,0px))!important}#meyden-floating-cart .mf-panel{max-height:min(65vh,520px)!important}#meyden-ux-guide{position:fixed;z-index:1000002;right:15px;bottom:calc(92px + env(safe-area-inset-bottom,0px));font:14px/1.45 system-ui,Arial,sans-serif;color:white}#meyden-ux-guide .guide-toggle{background:#283647;border:2px solid #ff913b;border-radius:28px;padding:11px 15px;color:white;font-weight:800;box-shadow:0 5px 18px #0009}#meyden-ux-guide .guide-content{display:none;position:absolute;right:0;bottom:58px;background:#121d28;color:white;width:min(370px,calc(100vw - 30px));max-height:65vh;overflow:auto;border:1px solid #fb8a37;border-radius:14px;padding:15px;box-shadow:0 12px 35px #000c}#meyden-ux-guide .guide-content.open{display:block}#meyden-ux-guide li{margin:9px 0}#meyden-ux-guide .guide-close{background:#fb8a37;color:#151515;padding:7px 12px;border:0;border-radius:8px;font-weight:800}#meyden-return-os-bar{padding-right:12px;padding-left:12px;max-width:100%}@media(max-width:600px){#meyden-floating-cart .mf-toggle{font-size:14px!important;padding:11px 12px!important}#meyden-ux-guide{right:12px;bottom:calc(82px + env(safe-area-inset-bottom,0px))}#meyden-ux-guide .guide-toggle{font-size:13px;padding:10px 12px}#meyden-return-os-bar{position:relative!important;font-size:12px!important}#meyden-floating-cart .mf-panel{width:min(310px,calc(100vw - 26px))!important}body{overflow-wrap:anywhere}}</style>
 </head>
 <body>
 <header class="top"><div class="wrap nav">
@@ -187,9 +235,7 @@ window.meydenBasketText=function(){return list().map((x,i)=>(i+1)+'. ['+x.depart
 const root=document.createElement('div');root.className='panel';root.style.marginTop='16px';const h=document.createElement('h3');h.textContent='Panier universel — choix des départements';const note=document.createElement('p');note.className='muted';note.textContent='Visitez les départements depuis cet OS, sélectionnez vos services, puis revenez ici. Les choix restent sur cet appareil, sans transmission à un serveur.';const items=document.createElement('div');items.id='meydenBasketItems';root.append(h,note,items);const summary=document.getElementById('quoteExistingSummary');if(summary&&summary.parentElement)summary.parentElement.appendChild(root);draw();
 const original=window.prepareQuote;if(typeof original==='function'){window.prepareQuote=function(){original();const d=document.getElementById('quoteDraft');if(!d||!d.value.includes('DEMANDE DE SOUMISSION — MEYDEN'))return;const extra='\n\nCHOIX DES AUTRES DÉPARTEMENTS :\n'+window.meydenBasketText();if(!d.value.includes('CHOIX DES AUTRES DÉPARTEMENTS'))d.value+=extra;};}
 })();
-</script><style id="meyden-floating-cart-style">
-#meyden-floating-cart{position:fixed;right:16px;bottom:22px;z-index:1000001;font:14px system-ui,Arial,sans-serif}#meyden-floating-cart button{cursor:pointer}#meyden-floating-cart .mf-toggle{border:2px solid #ffb276;border-radius:40px;background:#ea741f;color:white;padding:13px 17px;font-size:16px;font-weight:800;box-shadow:0 6px 24px #000a}#meyden-floating-cart .mf-panel{display:none;position:absolute;right:0;bottom:66px;width:min(340px,calc(100vw - 30px));max-height:60vh;overflow:auto;border:1px solid #e97520;border-radius:16px;background:#111b25;color:#fff;box-shadow:0 14px 40px #000c;padding:16px}#meyden-floating-cart .mf-panel.open{display:block}#meyden-floating-cart .mf-row{border-bottom:1px solid #40505c;padding:9px 0;line-height:1.5}#meyden-floating-cart .mf-cta{background:#ea741f;color:white;border:0;border-radius:9px;padding:11px 13px;font-weight:800;margin-top:12px;width:100%}#meyden-floating-cart .mf-muted{font-size:12px;color:#d0d9df}
-</style>
+</script>
 <script id="meyden-floating-cart-v24">(function(){
 const OS='https://meydenx-hedliner.vercel.app/';
 const isOS=true;
@@ -220,26 +266,7 @@ close.addEventListener('click',()=>{panel.classList.remove('open');toggle.setAtt
 cta.addEventListener('click',()=>{if(isOS){if(typeof window.meydenCheckoutEmail==='function')window.meydenCheckoutEmail();else if(typeof window.go==='function')window.go('soumission');panel.classList.remove('open');toggle.setAttribute('aria-expanded','false');}else{if(window.opener&&!window.opener.closed){try{window.opener.focus();return;}catch(e){}}location.assign(OS);}});
 window.addEventListener('storage',e=>{if(isOS&&e.key===key)render()});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{document.body.append(root);render()});else{document.body.append(root);render();}
-})();</script><style id="meyden-ux-mobile-guide-v26">html,body{max-width:100%;overflow-x:clip}*,*::before,*::after{box-sizing:border-box}nav,#nav,.tabs,.nav{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}nav button,nav a,#nav button,.tabs .tab,.nav button{flex-shrink:0}img,video,iframe,canvas{max-width:100%}input,select,textarea{max-width:100%;min-width:0}#meyden-floating-cart{bottom:calc(15px + env(safe-area-inset-bottom,0px))!important}#meyden-floating-cart .mf-panel{max-height:min(65vh,520px)!important}#meyden-ux-guide{position:fixed;z-index:1000002;right:15px;bottom:calc(92px + env(safe-area-inset-bottom,0px));font:14px/1.45 system-ui,Arial,sans-serif;color:white}#meyden-ux-guide .guide-toggle{background:#283647;border:2px solid #ff913b;border-radius:28px;padding:11px 15px;color:white;font-weight:800;box-shadow:0 5px 18px #0009}#meyden-ux-guide .guide-content{display:none;position:absolute;right:0;bottom:58px;background:#121d28;color:white;width:min(370px,calc(100vw - 30px));max-height:65vh;overflow:auto;border:1px solid #fb8a37;border-radius:14px;padding:15px;box-shadow:0 12px 35px #000c}#meyden-ux-guide .guide-content.open{display:block}#meyden-ux-guide li{margin:9px 0}#meyden-ux-guide .guide-close{background:#fb8a37;color:#151515;padding:7px 12px;border:0;border-radius:8px;font-weight:800}#meyden-return-os-bar{padding-right:12px;padding-left:12px;max-width:100%}@media(max-width:600px){#meyden-floating-cart .mf-toggle{font-size:14px!important;padding:11px 12px!important}#meyden-ux-guide{right:12px;bottom:calc(82px + env(safe-area-inset-bottom,0px))}#meyden-ux-guide .guide-toggle{font-size:13px;padding:10px 12px}#meyden-return-os-bar{position:relative!important;font-size:12px!important}#meyden-floating-cart .mf-panel{width:min(310px,calc(100vw - 26px))!important}body{overflow-wrap:anywhere}}</style><script id="meyden-unified-guide-v26">(function(){const steps=["Commencez à l’accueil et réalisez le diagnostic si nécessaire.","Explorez ADMIN, Incubation artistique ou Services 360° avec les liens du menu.","Sélectionnez les services : ils rejoignent le panier central de MEYDEN OS.","Ouvrez le panier 🛒 puis « Demander une soumission ». Vérifiez le récapitulatif.","Préparez le courriel unique, puis confirmez son envoi depuis votre messagerie. Aucun achat automatique."],name="MEYDEN × Hedliner";function mount(){if(document.getElementById('meyden-ux-guide'))return;const root=document.createElement('aside');root.id='meyden-ux-guide';const toggle=document.createElement('button');toggle.type='button';toggle.className='guide-toggle';toggle.textContent='ⓘ Tutoriel';toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','meyden-unified-guide-content');const pane=document.createElement('section');pane.id='meyden-unified-guide-content';pane.className='guide-content';const title=document.createElement('strong');title.textContent='Tutoriel — '+name;const ol=document.createElement('ol');steps.forEach(s=>{const li=document.createElement('li');li.textContent=s;ol.append(li)});const close=document.createElement('button');close.className='guide-close';close.type='button';close.textContent='Fermer';function state(open){pane.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));}toggle.addEventListener('click',()=>state(!pane.classList.contains('open')));close.addEventListener('click',()=>state(false));pane.append(title,ol,close);root.append(toggle,pane);document.body.append(root);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();})();</script><style id="meyden-guide-av-v27-css">
-@media(max-width:760px){
-#meyden-floating-cart{left:12px!important;right:auto!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important}
-#meyden-floating-cart .mf-panel{left:0!important;right:auto!important;bottom:58px!important;max-height:55vh!important}
-#meyden-ux-guide{right:12px!important;left:auto!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important}
-#meyden-ux-guide .guide-content{right:0!important;left:auto!important;bottom:58px!important;width:min(94vw,540px)!important;max-height:68dvh!important}
-#meyden-return-os-bar{position:relative!important;inset:auto!important;z-index:5!important}
-#meyden-return-os-button{max-width:100%;white-space:normal!important}
-#meyden-department-basket-v1,#meyden-floating-cart .mf-toggle,#meyden-ux-guide .guide-toggle{max-width:calc(100vw - 24px)}
-nav,#nav,.tabs,.nav{scrollbar-width:thin}
-nav button,nav a,#nav button,.tabs .tab,.nav button{white-space:nowrap}
-}
-#meyden-ux-guide .guide-content{width:min(580px,calc(100vw - 28px));max-height:75dvh;overflow:auto}
-#meyden-ux-guide .meyden-av-host{margin:12px 0 8px;max-height:48dvh;overflow:auto;border-radius:12px}
-#meyden-ux-guide .meyden-av-host > *{width:100%;max-width:100%;margin:0!important}
-#meyden-ux-guide .meyden-av-host .screen,#meyden-ux-guide .meyden-av-host .tutorial-stage{min-height:150px;max-height:35dvh;overflow:auto}
-#meyden-ux-guide .meyden-av-host .controlbar{flex-wrap:wrap}
-#meyden-ux-guide .meyden-av-host button{max-width:100%}
-#meyden-ux-guide .meyden-av-hint{font-size:12px;color:#dde7ef}
-</style>
+})();</script><script id="meyden-unified-guide-v26">(function(){const steps=["Commencez à l’accueil et réalisez le diagnostic si nécessaire.","Explorez ADMIN, Incubation artistique ou Services 360° avec les liens du menu.","Sélectionnez les services : ils rejoignent le panier central de MEYDEN OS.","Ouvrez le panier 🛒 puis « Demander une soumission ». Vérifiez le récapitulatif.","Préparez le courriel unique, puis confirmez son envoi depuis votre messagerie. Aucun achat automatique."],name="MEYDEN × Hedliner";function mount(){if(document.getElementById('meyden-ux-guide'))return;const root=document.createElement('aside');root.id='meyden-ux-guide';const toggle=document.createElement('button');toggle.type='button';toggle.className='guide-toggle';toggle.textContent='ⓘ Tutoriel';toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','meyden-unified-guide-content');const pane=document.createElement('section');pane.id='meyden-unified-guide-content';pane.className='guide-content';const title=document.createElement('strong');title.textContent='Tutoriel — '+name;const ol=document.createElement('ol');steps.forEach(s=>{const li=document.createElement('li');li.textContent=s;ol.append(li)});const close=document.createElement('button');close.className='guide-close';close.type='button';close.textContent='Fermer';function state(open){pane.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));}toggle.addEventListener('click',()=>state(!pane.classList.contains('open')));close.addEventListener('click',()=>state(false));pane.append(title,ol,close);root.append(toggle,pane);document.body.append(root);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();})();</script>
 <script id="meyden-guide-av-v27-js">(function(){
 const monitorSelector="#meydenCinema360";
 const hint="Accueil, diagnostic, départements et devis unique.";
@@ -274,29 +301,7 @@ button.addEventListener('click',()=>{pane.classList.add('open');toggle.setAttrib
 });
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
-})();</script><style id="meyden-mobile-home-v28-css">
-#meyden-welcome-v28{padding:22px 0 12px;display:grid;grid-template-columns:minmax(160px,280px) 1fr;gap:22px;align-items:center}
-#meyden-welcome-v28 img{width:100%;max-height:390px;object-fit:contain;border-radius:14px}
-#meyden-welcome-v28 h1{font-size:clamp(24px,4.5vw,43px);line-height:1.15;margin:8px 0}
-#meyden-welcome-v28 p{color:#d1d5db}
-#meyden-mobile-nav-toggle{display:none;background:#f2630a;color:#fff;border:0;border-radius:10px;padding:11px 16px;font-weight:800}
-@media(max-width:760px){
-#meyden-welcome-v28{grid-template-columns:1fr;text-align:center;padding-top:15px}
-#meyden-welcome-v28 .poster{max-width:260px;margin:0 auto}
-#meyden-mobile-nav-toggle{display:block;position:relative;z-index:20}
-header.top .wrap.nav{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important}
-header.top .brand{min-width:0!important;max-width:calc(100% - 115px)!important;flex:1 1 auto!important}
-header.top .brand img{width:44px!important;height:44px!important;min-width:44px!important;object-fit:contain!important}
-header.top .brand span{font-size:14px!important;min-width:0!important}
-header.top nav.tabs{display:none!important;position:static!important;width:100%!important;max-height:min(65vh,480px)!important;overflow-y:auto!important;overflow-x:hidden!important;flex-direction:column!important;align-items:stretch!important;padding:10px!important;white-space:normal!important}
-header.top nav.tabs.meyden-nav-open{display:flex!important}
-header.top nav.tabs .tab{display:block!important;width:100%!important;text-align:left!important;white-space:normal!important;padding:10px 12px!important}
-#meyden-floating-cart,#meyden-ux-guide{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important}
-main{padding-bottom:100px!important}
-#meydenDepartementsOfficiels .card{padding:17px!important}
-#meydenDepartementsOfficiels .grid{gap:10px!important}
-}
-</style>
+})();</script>
 <script id="meyden-mobile-home-v28-js">(function(){function init(){
 const main=document.querySelector('#meydenDepartementsOfficiels');
 const original=document.querySelector('#accueil .heroCard img');
@@ -310,7 +315,7 @@ copy.append(h,p,b);banner.append(poster,copy);main.parentElement.insertBefore(ba
 }
 const nav=document.querySelector('header.top nav.tabs');const brand=document.querySelector('header.top .brand');
 if(nav&&brand&&!document.querySelector('#meyden-mobile-nav-toggle')){const button=document.createElement('button');button.type='button';button.id='meyden-mobile-nav-toggle';button.textContent='☰ Menu';button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','meyden-menu-principal');nav.id='meyden-menu-principal';brand.after(button);button.addEventListener('click',()=>{const open=nav.classList.toggle('meyden-nav-open');button.setAttribute('aria-expanded',String(open));});nav.addEventListener('click',e=>{if(e.target.closest('.tab')){nav.classList.remove('meyden-nav-open');button.setAttribute('aria-expanded','false')}});}
-}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script><style id="meyden-top-actions-v30">#meyden-top-actions-v30{display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 12px;background:#131a21;flex-wrap:wrap}#meyden-top-actions-v30 a,#meyden-top-actions-v30 button{border:1px solid #f47b2b;border-radius:10px;padding:10px 13px;color:#fff;background:#2a3540;text-decoration:none;font:700 14px system-ui;cursor:pointer}@media(max-width:600px){#meyden-top-actions-v30{justify-content:space-between}#meyden-top-actions-v30 a,#meyden-top-actions-v30 button{flex:1;text-align:center;font-size:12px}}</style><script id="meyden-top-actions-v30-script">(function(){function mount(){const header=document.querySelector('header.top');if(!header)return;const bar=document.createElement('div');bar.id='meyden-top-actions-v30';const back=document.createElement('button');back.textContent='← Accueil MEYDEN';back.onclick=()=>{if(typeof go==='function')go('accueil');window.scrollTo({top:0,behavior:'smooth'})};const partner=document.createElement('a');partner.textContent='Hedliner officiel ↗';partner.href='https://hedliner.com/';partner.target='_blank';partner.rel='noopener noreferrer';bar.append(back,partner);header.after(bar)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount()})();</script><script id="meyden-cart-email-v31">(function(){
+}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script><script id="meyden-top-actions-v30-script">(function(){function mount(){const header=document.querySelector('header.top');if(!header)return;const bar=document.createElement('div');bar.id='meyden-top-actions-v30';const back=document.createElement('button');back.textContent='← Accueil MEYDEN';back.onclick=()=>{if(typeof go==='function')go('accueil');window.scrollTo({top:0,behavior:'smooth'})};const partner=document.createElement('a');partner.textContent='Hedliner officiel ↗';partner.href='https://hedliner.com/';partner.target='_blank';partner.rel='noopener noreferrer';bar.append(back,partner);header.after(bar)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount()})();</script><script id="meyden-cart-email-v31">(function(){
 const recipient='matthieuprudhomme1984@gmail.com';
 window.meydenCheckoutEmail=function(){
 const choices=[];try{const basket=JSON.parse(localStorage.getItem('meyden-universal-basket-v1')||'[]');if(Array.isArray(basket))basket.forEach(x=>{if(x&&x.title)choices.push('• ['+String(x.department||'MEYDEN')+'] '+String(x.title).slice(0,140)+' — '+String(x.details||'Tarif à confirmer').slice(0,300));});}catch(e){}
