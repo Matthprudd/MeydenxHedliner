@@ -67,6 +67,16 @@ main{padding-bottom:100px!important}
 #meyden-floating-cart{position:fixed;right:16px;bottom:22px;z-index:1000001;font:14px system-ui,Arial,sans-serif}#meyden-floating-cart button{cursor:pointer}#meyden-floating-cart .mf-toggle{border:2px solid #ffb276;border-radius:40px;background:#ea741f;color:white;padding:13px 17px;font-size:16px;font-weight:800;box-shadow:0 6px 24px #000a}#meyden-floating-cart .mf-panel{display:none;position:absolute;right:0;bottom:66px;width:min(340px,calc(100vw - 30px));max-height:60vh;overflow:auto;border:1px solid #e97520;border-radius:16px;background:#111b25;color:#fff;box-shadow:0 14px 40px #000c;padding:16px}#meyden-floating-cart .mf-panel.open{display:block}#meyden-floating-cart .mf-row{border-bottom:1px solid #40505c;padding:9px 0;line-height:1.5}#meyden-floating-cart .mf-cta{background:#ea741f;color:white;border:0;border-radius:9px;padding:11px 13px;font-weight:800;margin-top:12px;width:100%}#meyden-floating-cart .mf-muted{font-size:12px;color:#d0d9df}
 </style>
 <style id="meyden-ux-mobile-guide-v26">html,body{max-width:100%;overflow-x:clip}*,*::before,*::after{box-sizing:border-box}nav,#nav,.tabs,.nav{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}nav button,nav a,#nav button,.tabs .tab,.nav button{flex-shrink:0}img,video,iframe,canvas{max-width:100%}input,select,textarea{max-width:100%;min-width:0}#meyden-floating-cart{bottom:calc(15px + env(safe-area-inset-bottom,0px))!important}#meyden-floating-cart .mf-panel{max-height:min(65vh,520px)!important}#meyden-ux-guide{position:fixed;z-index:1000002;right:15px;bottom:calc(92px + env(safe-area-inset-bottom,0px));font:14px/1.45 system-ui,Arial,sans-serif;color:white}#meyden-ux-guide .guide-toggle{background:#283647;border:2px solid #ff913b;border-radius:28px;padding:11px 15px;color:white;font-weight:800;box-shadow:0 5px 18px #0009}#meyden-ux-guide .guide-content{display:none;position:absolute;right:0;bottom:58px;background:#121d28;color:white;width:min(370px,calc(100vw - 30px));max-height:65vh;overflow:auto;border:1px solid #fb8a37;border-radius:14px;padding:15px;box-shadow:0 12px 35px #000c}#meyden-ux-guide .guide-content.open{display:block}#meyden-ux-guide li{margin:9px 0}#meyden-ux-guide .guide-close{background:#fb8a37;color:#151515;padding:7px 12px;border:0;border-radius:8px;font-weight:800}#meyden-return-os-bar{padding-right:12px;padding-left:12px;max-width:100%}@media(max-width:600px){#meyden-floating-cart .mf-toggle{font-size:14px!important;padding:11px 12px!important}#meyden-ux-guide{right:12px;bottom:calc(82px + env(safe-area-inset-bottom,0px))}#meyden-ux-guide .guide-toggle{font-size:13px;padding:10px 12px}#meyden-return-os-bar{position:relative!important;font-size:12px!important}#meyden-floating-cart .mf-panel{width:min(310px,calc(100vw - 26px))!important}body{overflow-wrap:anywhere}}</style>
+<style id="meyden-segment-guide-v33-css">
+#meyden-segment-guide-v33{border:1px solid #f58236;border-radius:12px;background:#101923;color:#eef3f8;padding:12px;margin:9px 0}
+#meyden-segment-guide-v33 .msg-screen{background:linear-gradient(145deg,#26303d,#090e15);border-radius:11px;min-height:120px;padding:14px;display:grid;align-content:center;gap:7px}
+#meyden-segment-guide-v33 h3{font-size:18px;line-height:1.25;margin:0;color:#fff}
+#meyden-segment-guide-v33 p{font-size:13px;color:#d4dee8;margin:0;line-height:1.55}
+#meyden-segment-guide-v33 .msg-controls{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+#meyden-segment-guide-v33 button,#meyden-segment-guide-v33 select{background:#293645;color:#fff;border:1px solid #f58236;border-radius:8px;padding:8px 10px;font-size:13px}
+#meyden-segment-guide-v33 button:focus-visible{outline:3px solid #fff}
+#meyden-segment-guide-v33 .msg-caption{font-size:12px;color:#ffc190}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap nav">
@@ -332,4 +342,65 @@ const mailto='mailto:'+recipient+'?subject='+encodeURIComponent(subject)+'&body=
 if(mailto.length>1900){if(typeof window.go==='function')window.go('soumission');if(field){field.focus();field.scrollIntoView({behavior:'smooth',block:'center'});}alert('Votre demande dépasse la longueur recommandée pour un lien courriel. Le brouillon a été préparé dans la soumission : copiez-le dans un courriel à '+recipient+'.');return;}
 window.location.href=mailto;
 };
+})();</script><script id="meyden-segment-guide-v33-js">(function(){
+const sections={
+accueil:{title:'Bienvenue chez MEYDEN',scenes:[
+['Notre identité','Bienvenue chez MEYDEN, Mouvement Artistique du Québec. Notre mission : structurer, créer et élever les projets artistiques et culturels.'],
+['Votre parcours','Explorez le diagnostic, les départements, les services et votre dossier. Le tutoriel peut rester accessible pendant votre visite.'],
+['Une seule demande','Vos choix rejoignent le panier du portail central. La demande de devis ouvre votre messagerie et ne constitue pas un achat automatique.']]},
+diagnostic:{title:'Diagnostic MEYDEN',scenes:[
+['Comprendre le diagnostic','Le diagnostic aide à préciser le niveau de préparation de votre projet et les besoins à organiser.'],
+['Répondre aux questions','Complétez les questions avec les informations de votre projet. Vérifiez vos réponses avant de poursuivre.'],
+['Utiliser les résultats','Les résultats sont indicatifs. Ils orientent vers les services ou départements pertinents, sans constituer un devis ni un engagement.']]},
+admin:{title:'Administration des établissements',scenes:[
+['Le département ADMIN','Le programme accompagne les salles, établissements et organisateurs dans la structuration de leurs activités.'],
+['Découvrir les outils','Ouvrez le département Administration des établissements pour consulter sa présentation audiovisuelle et ses outils de qualification et de diagnostic.'],
+['Préparer une soumission','Sélectionnez les prestations souhaitées et retournez au panier central pour préparer une seule demande de devis.']]},
+incubation:{title:'Incubation artistique',scenes:[
+['Accompagner les artistes','Le programme d’incubation MEYDEN accompagne les artistes dans leur structuration, leur déploiement et leur expansion.'],
+['Trois niveaux','Niveau un : structuration à cent dollars par mois. Niveau deux : déploiement à deux cent cinquante dollars par mois. Niveau trois : expansion à deux cent cinquante dollars par mois, plus un pourcentage selon une entente spécifique.'],
+['Suivre le parcours','Dans le département Incubation, découvrez la présentation Made In complète, choisissez un niveau et ajoutez votre demande au panier central.']]},
+services:{title:'Services 360 degrés',scenes:[
+['Le catalogue 360','Explorez les catégories de services de production, d’accompagnement et de valorisation proposées par MEYDEN.'],
+['Lire une fiche','Chaque fiche présente son contenu et, lorsqu’il est disponible, un tarif indicatif. Le prix définitif sera précisé dans le devis.'],
+['Composer votre panier','Ajoutez les services qui correspondent à vos besoins. Vous pourrez les retirer avant de préparer votre courriel de demande.']]},
+dossier:{title:'Mon dossier',scenes:[
+['Votre dossier projet','Regroupez les informations nécessaires à la compréhension de votre projet dans le dossier MEYDEN.'],
+['Vérifier les informations','Relisez les services et les informations saisies. Certaines données sont conservées uniquement dans ce navigateur.'],
+['Poursuivre','Lorsque vous êtes prêt, ouvrez le panier pour préparer une demande de soumission unique.']]},
+candidature:{title:'Candidature',scenes:[
+['Présenter votre projet','Décrivez votre initiative, ses objectifs et le type d’accompagnement recherché.'],
+['Compléter la candidature','Remplissez les champs affichés, en évitant toute information sensible non nécessaire à une première demande.'],
+['Prochaine étape','Consultez les options de soumission : une candidature ou un dossier ne constitue pas automatiquement un contrat.']]},
+hedliner:{title:'Hedliner officiel',scenes:[
+['Notre partenaire','Hedliner est un site partenaire externe, distinct des applications MEYDEN.'],
+['Ouvrir le site','Le lien Hedliner officiel ouvre sa plateforme. Le tutoriel MEYDEN ne suit pas la navigation à l’intérieur de ce site externe.'],
+['Revenir au portail','Pour le panier et la demande de devis MEYDEN, revenez dans MEYDEN × Hedliner.']]},
+soumission:{title:'Demander une soumission',scenes:[
+['Vérifier le panier','Ouvrez le panier MEYDEN. Vous pouvez retirer une sélection ou fermer le panneau pour continuer votre visite.'],
+['Préparer la demande','Vérifiez les services, les informations de contact et le résumé du projet. Les montants affichés sont indicatifs.'],
+['Envoyer le courriel','La finalisation prépare un courriel adressé à MEYDEN dans votre messagerie. Vous devez confirmer l’envoi vous-même; aucun paiement ou contrat automatique.']]}
+};
+function mount(){
+const pane=document.querySelector('#meyden-ux-guide .guide-content'),toggle=document.querySelector('#meyden-ux-guide .guide-toggle');if(!pane||!toggle)return;
+const root=document.createElement('div');root.id='meyden-segment-guide-v33';root.innerHTML='<div class="msg-screen"><span class="msg-caption" id="msg-count">Scène 1</span><h3 id="msg-title"></h3><p id="msg-subtitle" aria-live="polite"></p></div><div class="msg-controls"><button type="button" id="msg-prev">← Précédent</button><button type="button" id="msg-play">▶ Écouter</button><button type="button" id="msg-next">Suivant →</button><button type="button" id="msg-stop">■ Arrêter</button><select id="msg-section" aria-label="Choisir la présentation Made In"></select></div><p class="msg-caption">Narration française locale et sous-titres. L’écoute démarre seulement après votre action.</p>';
+pane.insertBefore(root,pane.firstChild);
+const choose=root.querySelector('#msg-section');Object.entries(sections).forEach(([id,s])=>{const opt=document.createElement('option');opt.value=id;opt.textContent=s.title;choose.append(opt)});
+let current='accueil',scene=0,playing=false;const synth=window.speechSynthesis;
+function halt(){if(synth)try{synth.cancel()}catch(e){}playing=false;root.querySelector('#msg-play').textContent='▶ Écouter'}
+function draw(){const d=sections[current];const entry=d.scenes[scene];choose.value=current;root.querySelector('#msg-count').textContent=d.title+' · Scène '+(scene+1)+' / '+d.scenes.length;root.querySelector('#msg-title').textContent=entry[0];root.querySelector('#msg-subtitle').textContent=entry[1];root.querySelector('#msg-prev').disabled=scene===0;root.querySelector('#msg-next').disabled=scene===d.scenes.length-1}
+function change(id){if(!sections[id])return;halt();current=id;scene=0;draw()}
+function speak(){if(!synth||typeof SpeechSynthesisUtterance==='undefined'){root.querySelector('#msg-subtitle').textContent+=' (Audio non disponible sur ce navigateur.)';return;}halt();const utterance=new SpeechSynthesisUtterance(sections[current].scenes[scene].join('. '));utterance.lang='fr-CA';utterance.rate=.92;utterance.onend=()=>{playing=false;root.querySelector('#msg-play').textContent='▶ Écouter'};utterance.onerror=()=>{playing=false;root.querySelector('#msg-play').textContent='▶ Écouter'};playing=true;root.querySelector('#msg-play').textContent='⏸ Pause';synth.speak(utterance)}
+root.querySelector('#msg-play').addEventListener('click',()=>{if(playing){if(synth?.paused){synth.resume();root.querySelector('#msg-play').textContent='⏸ Pause'}else{synth?.pause();root.querySelector('#msg-play').textContent='▶ Reprendre'}}else speak()});
+root.querySelector('#msg-stop').addEventListener('click',halt);
+root.querySelector('#msg-prev').addEventListener('click',()=>{if(scene>0){halt();scene--;draw()}});
+root.querySelector('#msg-next').addEventListener('click',()=>{if(scene<sections[current].scenes.length-1){halt();scene++;draw()}});
+choose.addEventListener('change',()=>change(choose.value));
+function sync(){const view=document.querySelector('section.view.active')?.id||'accueil';if(view!==current&&sections[view])change(view)}
+document.querySelectorAll('nav.tabs .tab').forEach(a=>a.addEventListener('click',()=>{const href=a.getAttribute('href')||'';let id=a.dataset.view;if(!id){if(href.includes('admin-officiel'))id='admin';else if(href.includes('incubation-artistique'))id='incubation';else if(href.includes('services-360'))id='services';else if(href.includes('hedliner.com'))id='hedliner';}if(id&&sections[id])change(id)},true));
+document.addEventListener('click',e=>{if(e.target.closest('#meyden-ux-guide'))return;setTimeout(sync,80)},false);
+toggle.addEventListener('click',sync);
+window.addEventListener('pagehide',halt);draw();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
 })();</script></body></html>
