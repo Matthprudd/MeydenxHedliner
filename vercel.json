@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/ancien",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/ancien/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
