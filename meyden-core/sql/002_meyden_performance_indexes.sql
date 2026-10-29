@@ -1,0 +1,10 @@
+-- Indexes des relations MEYDEN OS Core (2026-10-29)
+create index if not exists idx_meyden_artists_created_by on public.meyden_artists(created_by);
+create index if not exists idx_meyden_artists_owner_id on public.meyden_artists(owner_id);
+create index if not exists idx_meyden_booking_requests_artist_id on public.meyden_booking_requests(artist_id);
+create index if not exists idx_meyden_booking_requests_requester_id on public.meyden_booking_requests(requester_id);
+create index if not exists idx_meyden_booking_requests_venue_id on public.meyden_booking_requests(venue_id);
+create index if not exists idx_meyden_booking_slots_artist_id on public.meyden_booking_slots(artist_id);
+create index if not exists idx_meyden_booking_slots_updated_by on public.meyden_booking_slots(updated_by);
+create index if not exists idx_meyden_dossiers_artist_id on public.meyden_dossiers(artist_id);
+create index if not exists idx_meyden_dossiers_owner_id on public.meyden_dossiers(owner_id);
