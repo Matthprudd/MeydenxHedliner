@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#090a0b">
-  <title>MEYDEN Cut Studio — Symbioz 2.0</title>
+  <title>MEYDEN Cut Studio — Atelier Promo</title>
   <style>
     :root{--bg:#090a0b;--panel:#121416;--panel2:#181b1e;--line:#2d3136;--text:#f5f3ef;--muted:#92979e;--orange:#ff642d;--green:#48cf87;--yellow:#efb758;--red:#de4e5d;--radius:9px}
     *{box-sizing:border-box}html{color-scheme:dark}body{margin:0;background:radial-gradient(circle at 55% -15%,#352016 0,transparent 33%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{border:1px solid var(--line);border-radius:7px;background:#202429;color:var(--text);padding:9px 11px;font-weight:800;cursor:pointer}button:hover{border-color:#555d65;filter:brightness(1.12)}button:disabled{opacity:.4;cursor:not-allowed}.primary{background:var(--orange);border-color:transparent;color:#130b07}.danger{color:#ff8b96}.success{color:#65dea0}.small{padding:7px 9px;font-size:11px}.wide{width:100%}.hidden{display:none!important}
@@ -18,7 +18,7 @@
 <style id="meyden-os-cut-navigation">.meyden-cut-nav{display:flex;gap:9px;flex-wrap:wrap;align-items:center;padding:9px 15px;background:#111820;border-bottom:1px solid #a5582b}.meyden-cut-nav a{padding:8px 12px;border:1px solid #83502f;border-radius:8px;color:#ffc08a;text-decoration:none;font-size:13px}.meyden-cut-nav strong{color:#ff8a32;letter-spacing:.05em}@media(max-width:600px){.meyden-cut-nav{gap:6px;padding:7px}.meyden-cut-nav a{font-size:12px;padding:7px}}</style></head>
 <body><nav class="meyden-cut-nav" aria-label="Navigation MEYDEN OS"><strong>ATELIER PROMO</strong><a href="/">Retour au quartier</a><a href="/services-360/">Services 360°</a><a href="/modules/meyden-panier-central/">Panier central</a></nav>
   <header>
-    <div class="brand"><div class="logo"><span>✂</span></div><div><small>MEYDEN • Symbioz 2.0</small><h1>MEYDEN CUT STUDIO <em>V1.6 CHROMEBOOK</em></h1></div></div>
+    <div class="brand"><div class="logo"><span>✂</span></div><div><small>MEYDEN • ATELIER PROMO</small><h1>MEYDEN CUT STUDIO <em>V1.6 CHROMEBOOK</em></h1></div></div>
     <div id="compat" class="compat"><i></i><div><strong>Analyse du navigateur</strong><span id="compatText">Vérification de l’export MP4 H.264…</span></div></div>
   </header>
 
@@ -29,13 +29,13 @@
       <input id="videoFiles" type="file" accept="video/*,.mp4,.mov,.mkv,.webm,.insv" multiple>
       <p class="help">Les fichiers restent sur votre appareil. Sélection multiple acceptée.</p>
       <div class="action-grid">
-        <button id="saveLocal" class="small">Sauvegarder</button><button id="restoreLocal" class="small">Restaurer</button>
+        <button id="saveLocal" class="small">Sauvegarder</button><button id="restoreLocal" class="small">Reprendre sauvegarde</button>
         <button id="exportProject" class="small">Projet JSON</button><label for="projectFile" class="small" style="display:grid;place-items:center;border:1px solid var(--line);border-radius:7px;background:#202429;font-weight:800;cursor:pointer">Importer JSON</label>
       </div>
       <input id="projectFile" type="file" accept="application/json,.json">
-      <div class="autosave">● Sauvegarde automatique locale active</div>
+      <div class="autosave">● Sauvegarde de secours locale pendant le montage</div><p class="help" id="meyden-resume-info">Atelier vierge au démarrage. Cliquez sur « Reprendre sauvegarde » pour retrouver le montage; pour des raisons de sécurité du navigateur, les fichiers vidéo ou audio doivent parfois être sélectionnés à nouveau.</p>
       <div id="clipList" class="clip-list"><div class="empty">Importez vos rushs pour commencer le montage.</div></div>
-      <button id="resetProject" class="wide danger small" style="margin-top:12px">Nouveau projet</button>
+      <button id="resetProject" class="wide danger small" style="margin-top:12px">Réinitialiser / Nouveau projet</button>
     </aside>
 
     <main class="main">
@@ -77,23 +77,23 @@
         <div class="two"><button id="duplicateClip">Dupliquer</button><button id="splitInspector">Scinder</button></div>
         <div class="title-settings">
           <h3>INTRO DU VIDÉOCLIP</h3>
-          <label style="font-size:10px"><input id="introEnabled" type="checkbox" checked> Activer l’intro</label>
-          <div class="field" style="margin-top:8px"><label>Titre</label><input id="introTitle" value="SYMBIOZ 2.0"></div>
-          <div class="field"><label>Sous-titre</label><input id="introSubtitle" value="WHAT YOU MADE OF ME"></div>
+          <label style="font-size:10px"><input id="introEnabled" type="checkbox"> Activer l’intro</label>
+          <div class="field" style="margin-top:8px"><label>Titre</label><input id="introTitle" value="" placeholder="Titre du projet"></div>
+          <div class="field"><label>Sous-titre</label><input id="introSubtitle" value="" placeholder="Sous-titre"></div>
           <div class="field"><label>Durée (secondes)</label><input id="introDuration" type="number" min="0.5" max="10" step="0.1" value="2.5"></div>
         </div>
         <div class="title-settings">
           <h3>OUTRO / GÉNÉRIQUE</h3>
-          <label style="font-size:10px"><input id="outroEnabled" type="checkbox" checked> Activer l’outro</label>
-          <div class="field" style="margin-top:8px"><label>Titre</label><input id="outroTitle" value="SYMBIOZ 2.0"></div>
-          <div class="field"><label>Sous-titre</label><input id="outroSubtitle" value="UNE PRODUCTION MEYDEN"></div>
+          <label style="font-size:10px"><input id="outroEnabled" type="checkbox"> Activer l’outro</label>
+          <div class="field" style="margin-top:8px"><label>Titre</label><input id="outroTitle" value="" placeholder="Titre de fin"></div>
+          <div class="field"><label>Sous-titre</label><input id="outroSubtitle" value="" placeholder="Crédits de fin"></div>
           <div class="field"><label>Durée (secondes)</label><input id="outroDuration" type="number" min="0.5" max="10" step="0.1" value="3"></div>
         </div>
         <p class="help">Raccourcis : espace = lecture/pause, I = point IN, O = point OUT.</p>
       </div></div>
 
       <div id="pane-sheet" class="tab-pane"><div class="stack">
-        <div class="field"><label>Nom du projet</label><input id="projectName" value="Symbioz 2.0 — vidéoclip"></div>
+        <div class="field"><label>Nom du projet</label><input id="projectName" value="" placeholder="Nom du projet"></div>
         <div class="field"><label>Nom de la scène / prise</label><input id="sceneName" placeholder="Ex. Rue — prise 04"></div>
         <div class="field"><label>Catégorie</label><select id="category"><option>Prioritaire</option><option>Bonne prise</option><option>À vérifier</option><option>Rejetée</option></select></div>
         <div class="field"><label>Notes</label><textarea id="notes" placeholder="Mouvement, cadrage, moment important…"></textarea></div>
@@ -139,7 +139,7 @@
       </div></div>
     </aside>
   </div>
-  <footer><span>MEYDEN CUT STUDIO V1.6 • SYMBIOZ 2.0</span><span>TRAITEMENT LOCAL — VOS VIDÉOS NE SONT PAS ENVOYÉES</span></footer>
+  <footer><span>MEYDEN CUT STUDIO V1.6 • ATELIER PROMO</span><span>TRAITEMENT LOCAL — VOS VIDÉOS NE SONT PAS ENVOYÉES</span></footer>
   <div id="notice" class="notice"></div>
 
   <script type="module">
@@ -155,7 +155,7 @@
       if(typeof proto.dispatchEvent!=="function")Object.defineProperty(proto,"dispatchEvent",{configurable:true,value:function(event){dispatchEncoderEvent(this,event.type,event);return true}});return true};
     const legacyVideoEncoder=patchLegacyEncoder("VideoEncoder"),legacyAudioEncoder=patchLegacyEncoder("AudioEncoder"),legacyEncoderMode=legacyVideoEncoder||legacyAudioEncoder;
 
-    const $=id=>document.getElementById(id); const STORAGE_KEY="meyden-cut-studio-standalone-v1";
+    const $=id=>document.getElementById(id); const STORAGE_KEY="meyden-cut-studio-standalone-v1", SAVED_KEY="meyden-cut-studio-manual-save-v2";
     let clips=[],selections=[],audioTracks=[],selectedId=null,selectedAudioId=null,pendingProject=null,pendingAudioTracks=[],timelineStopped=false,exporting=false,noticeTimer,audioPreview=null;
     const video=$("video"),videoFiles=$("videoFiles"),audioFiles=$("audioFiles"),projectFile=$("projectFile");
     const fmt=s=>{s=Math.max(0,Number.isFinite(+s)?+s:0);return `${String(Math.floor(s/60)).padStart(2,"0")}:${String(Math.floor(s%60)).padStart(2,"0")}:${String(Math.floor((s%1)*30)).padStart(2,"0")}`};
@@ -269,7 +269,7 @@
         vs.close();status("Finalisation du MP4…");await output.finalize();
         if(!target.buffer)throw new Error("Le fichier final n’a pas été créé.");
         download(new Blob([target.buffer],{type:"video/mp4"}),`${safeName($("projectName").value)}_${$("ratio").value.replace(":","x")}_1080p.mp4`);
-        progress(100);status("MP4 1080p terminé — prêt pour CapCut");notify("Export MP4 avec audio terminé.","ok")
+        progress(100);status("MP4 1080p terminé — fichier prêt à importer dans YouTube Studio");notify("Export MP4 avec audio terminé.","ok")
       }catch(e){
         progress(0);const raw=e?.message||"Export interrompu.";
         const message=/specific encoder configuration|not supported in this environment/i.test(raw)?"Cet appareil refuse ce profil vidéo. Choisissez 12 Mb/s et 30 i/s, puis relancez l’export.":/addEventListener|dequeue/i.test(raw)?"Compatibilité ChromeOS activée. Fermez puis rouvrez cette page avant de relancer l’export.":raw;
@@ -288,15 +288,15 @@
     ["introEnabled","introTitle","introSubtitle","introDuration","outroEnabled","outroTitle","outroSubtitle","outroDuration"].forEach(id=>$(id).onchange=()=>{renderTimeline();autosave()});
     $("audioName").onchange=e=>updateAudio({name:e.target.value||selectedAudio().file.name});$("audioStart").onchange=e=>updateAudio({start:Math.max(0,+e.target.value||0)});$("audioTrimStart").onchange=e=>{const track=selectedAudio();updateAudio({trimStart:Math.max(0,Math.min(+e.target.value,track.trimEnd-.01))})};$("audioTrimEnd").onchange=e=>{const track=selectedAudio();updateAudio({trimEnd:Math.max(track.trimStart+.01,Math.min(+e.target.value,track.duration))})};$("audioFadeIn").onchange=e=>updateAudio({fadeIn:Math.max(0,+e.target.value||0)});$("audioVolume").oninput=e=>{$("audioVolumeValue").textContent=`${Math.round(+e.target.value*100)}%`;updateAudio({volume:+e.target.value})};$("audioLoop").onchange=e=>updateAudio({loop:e.target.checked});$("audioMuted").onchange=e=>updateAudio({muted:e.target.checked});$("previewAudio").onclick=previewSelectedAudio;$("deleteAudio").onclick=()=>{const track=selectedAudio();if(!track)return;if(audioPreview){audioPreview.pause();audioPreview=null}URL.revokeObjectURL(track.url);audioTracks=audioTracks.filter(item=>item.id!==track.id);selectedAudioId=audioTracks[0]?.id||null;renderAudioTracks();autosave()};
     $("addSelection").onclick=()=>{const c=selected();if(!c)return notify("Sélectionnez d’abord un plan.","error");selections.push({id:crypto.randomUUID(),name:$("sceneName").value.trim()||`Sélection ${selections.length+1}`,category:$("category").value,notes:$("notes").value.trim(),clipId:c.id,sourceName:c.file.name,sourceSize:c.file.size,in:c.trimStart,out:c.trimEnd,duration:length(c)});$("sceneName").value="";$("notes").value="";renderSelections();autosave();notify("Sélection ajoutée.","ok")};
-    $("saveLocal").onclick=()=>{autosave();notify("Projet sauvegardé sur cet appareil.","ok")};$("restoreLocal").onclick=()=>{try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)throw new Error("Aucune sauvegarde locale.");applyProject(normalizeProject(JSON.parse(raw)))}catch(e){notify(e.message,"error")}};$("exportProject").onclick=()=>download(new Blob([JSON.stringify(projectData(),null,2)],{type:"application/json"}),`${safeName($("projectName").value)}.meyden.json`);
-    $("resetProject").onclick=()=>{if(!confirm("Créer un nouveau projet et effacer la sauvegarde locale ?"))return;clips.forEach(c=>URL.revokeObjectURL(c.url));audioTracks.forEach(track=>URL.revokeObjectURL(track.url));clips=[];audioTracks=[];selections=[];selectedId=null;selectedAudioId=null;pendingProject=null;pendingAudioTracks=[];localStorage.removeItem(STORAGE_KEY);video.removeAttribute("src");video.load();$("projectName").value="Symbioz 2.0 — vidéoclip";renderAll();notify("Nouveau projet prêt.","ok")};
+    $("saveLocal").onclick=()=>{const data=JSON.stringify(projectData());localStorage.setItem(SAVED_KEY,data);autosave();notify("Projet sauvegardé. Pour reprendre après fermeture, cliquez sur Reprendre sauvegarde puis réimportez vos médias sources.","ok")};$("restoreLocal").onclick=()=>{try{const raw=localStorage.getItem(SAVED_KEY)||localStorage.getItem(STORAGE_KEY);if(!raw)throw new Error("Aucune sauvegarde locale.");applyProject(normalizeProject(JSON.parse(raw)))}catch(e){notify(e.message,"error")}};$("exportProject").onclick=()=>download(new Blob([JSON.stringify(projectData(),null,2)],{type:"application/json"}),`${safeName($("projectName").value)}.meyden.json`);
+    $("resetProject").onclick=()=>{if(!confirm("Recommencer à zéro ? Votre sauvegarde manuelle restera disponible avec « Reprendre sauvegarde ». Aucune vidéo source ne sera supprimée de votre appareil."))return;clips.forEach(c=>URL.revokeObjectURL(c.url));audioTracks.forEach(track=>URL.revokeObjectURL(track.url));clips=[];audioTracks=[];selections=[];selectedId=null;selectedAudioId=null;pendingProject=null;pendingAudioTracks=[];localStorage.removeItem(STORAGE_KEY);video.removeAttribute("src");video.load();$("projectName").value="";$("introEnabled").checked=false;$("outroEnabled").checked=false;["introTitle","introSubtitle","outroTitle","outroSubtitle"].forEach(id=>$(id).value="");renderAll();notify("Nouveau projet prêt.","ok")};
     $("projectName").oninput=autosave;["ratio","fps","bitrate"].forEach(id=>$(id).onchange=()=>{updatePreviewStyle();autosave()});$("exportMp4").onclick=$("quickExport").onclick=exportMp4;
     document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".tab-pane").forEach(p=>p.classList.toggle("active",p.id===`pane-${b.dataset.tab}`))});
     window.addEventListener("keydown",e=>{if(["INPUT","TEXTAREA","SELECT"].includes(e.target.tagName))return;if(e.code==="Space"){e.preventDefault();if(selected())video.paused?video.play():video.pause()}if(e.key.toLowerCase()==="i")markIn();if(e.key.toLowerCase()==="o")markOut()});
     window.addEventListener("beforeunload",()=>{clips.forEach(c=>URL.revokeObjectURL(c.url));audioTracks.forEach(track=>URL.revokeObjectURL(track.url))});
 
     (async()=>{try{const d=dimensions(),preset=await findAvcPreset(d.width,d.height,+$("bitrate").value,+$("fps").value);if(preset){$("compat").classList.add("ready");$("compat").querySelector("strong").textContent="MP4 1080p compatible";$("compatText").textContent=legacyEncoderMode?`ChromeOS — ${preset.label}`:preset.label;$("exportStatus").textContent=`MP4 1080p prêt — ${preset.label}`}else throw new Error()}catch{$("compat").classList.add("limited");$("compat").querySelector("strong").textContent="Compatibilité limitée";$("compatText").textContent="Aucun profil H.264 1080p accepté";$("exportStatus").textContent="Encodeur H.264 1080p indisponible sur cet appareil"}})();
-    try{const raw=localStorage.getItem(STORAGE_KEY);if(raw)applyProject(normalizeProject(JSON.parse(raw)))}catch{localStorage.removeItem(STORAGE_KEY)}renderAll();
+    renderAll();
   </script>
 </body>
 </html>
