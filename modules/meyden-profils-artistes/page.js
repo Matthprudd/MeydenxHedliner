@@ -1,6 +1,6 @@
-import {initShell,loadRows,upsert,remove,watch,safe,notice} from '../../shared/sync.js';
-const $=id=>document.getElementById(id);let artists=[],staff=false,user,editing=null;
-async function reload(){artists=await loadRows('meyden_artists');render()}
+import {db,initShell,loadRows,upsert,remove,watch,safe,notice} from '../../shared/sync.js';
+const $=id=>document.getElementById(id);let artists=[],publicProfiles={},staff=false,user,editing=null;
+async function reload(){artists=await loadRows('meyden_artists');const q=await db().from('meyden_public_profiles').select('user_id,slug').eq('published',true);if(!q.error)publicProfiles=Object.fromEntries((q.data||[]).map(p=>[p.user_id,p.slug]));render()}
 function urlLink(s){try{let u=new URL(s);return ['https:','http:'].includes(u.protocol)?'<a href="'+safe(u.href)+'" target="_blank" rel="noopener">Voir le lien</a>':''}catch{return''}}
 function render(){const q=$('search').value.toLowerCase();let a=artists.filter(v=>JSON.stringify(v).toLowerCase().includes(q));$('artists').innerHTML=a.length?a.map(v=>'<div class="item"><h3>'+safe(v.stage_name)+'</h3><span class="pill">'+safe(v.status)+'</span><p>'+safe(v.style)+' · '+safe(v.city)+'</p><p>'+safe(v.description)+'</p><p>'+urlLink(v.hedliner_url)+' '+urlLink(v.video_url)+'</p><div class="actions"><a class="button ghost" href="/modules/meyden-calendrier-booking/">Booking</a>'+(staff?'<button data-edit="'+safe(v.id)+'">Modifier</button><button class="ghost" data-delete="'+safe(v.id)+'">Supprimer</button>':'')+'</div></div>').join(''):'<p>Aucun artiste trouvé.</p>'}
 initShell(async(u,access)=>{user=u;staff=['admin','staff'].includes(access.role);$('staffArea').hidden=!staff;await reload();return watch(['meyden_artists'],()=>reload().catch(e=>notice(e.message)))});
