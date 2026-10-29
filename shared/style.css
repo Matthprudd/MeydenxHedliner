@@ -6,3 +6,24 @@ main{max-width:1150px;margin:20px auto 65px;padding:0 14px}h1{font-size:clamp(30
 .card{background:linear-gradient(145deg,#1b222c,#11171d);border:1px solid var(--line);padding:18px;border-radius:14px;margin:15px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.grid .card{margin:0}
 input,select,textarea{width:100%;padding:11px;background:#0a1018;color:#fff;border:1px solid #788190;border-radius:9px;font:inherit}textarea{min-height:90px;resize:vertical}label{display:block;margin:9px 0;font-weight:650;color:#ddd}
 button,.button{cursor:pointer;padding:10px 14px;font:inherit;border-radius:9px;background:#ff8126;border:1px solid #ff8126;color:#140a04;font-weight:800;text-decoration:none}button.ghost,.button.ghost{background:#29313b;border-color:#6c5344;color:#fff}.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}.actions button{flex:0 0 auto}.item{border-top:1px solid #49515e;padding:12px 0}.item:first-child{border:0}.item p{margin:4px 0}.pill{display:inline-block;border-radius:30px;padding:3px 10px;font-size:12px;background:#382518;color:#ffbc86}.status{min-height:32px;color:#ffbd88;margin:10px 0;font-size:13px}section[hidden]{display:none!important}.auth{display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap;background:#181b1f;border-radius:10px;padding:10px 15px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.calendar button{padding:8px 2px;background:#26313d;border:1px solid #57606a;color:#fff;min-height:45px;font-weight:600}.calendar .selected{background:#f28331;color:#130902}.calendar .day-has-events{border-bottom:3px solid #ff9d51}.calendar .daylabel{text-align:center;font-size:12px;color:#ced3da}.calendar .blank{visibility:hidden}.calendar-head{display:flex;gap:12px;justify-content:space-between;align-items:center;margin:10px 0}.legend{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.tiny{font-size:12px;color:#b6bec7}footer{text-align:center;color:#b6bec7;margin-bottom:32px;font-size:12px}@media(max-width:550px){header{padding:10px 13px}nav{font-size:12px}.calendar button{min-height:38px}}
+
+/* MEYDEN OS — identité cinématographique commune, couche purement visuelle */
+:root{--meyden-glow:#ff923d;--meyden-outline:#b96d39;--meyden-glass:rgba(10,13,19,.52)}
+body{background:radial-gradient(ellipse at 50% -12%,#5e280e68,transparent 55%),linear-gradient(150deg,#0b0d12,#12100f 54%,#080b10);background-attachment:fixed}
+header{background:#0b1018eb;border-bottom:1px solid #ee79274f;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+header strong{color:#faf4ee;letter-spacing:.07em;text-shadow:0 3px 12px #000}
+nav a{color:#ffe7d2;padding:6px 4px;border-bottom:1px solid transparent}nav a:hover,nav a:focus-visible{border-color:#ff923d;text-decoration:none}
+h1,h2,h3{color:#fff8f2;text-shadow:0 3px 10px #000c}
+.card{background:linear-gradient(140deg,rgba(13,19,27,.66),rgba(20,13,10,.47));border:1px solid #f18c3040;box-shadow:0 10px 32px #0004;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+button,.button{border-radius:999px;background:rgba(255,130,38,.2);border:1px solid #ff9d56a8;color:#fff6ee;text-shadow:0 2px 6px #000;transition:background .15s,border-color .15s}
+button.ghost,.button.ghost{background:#15181db3;border-color:#ec894e83;color:#fff8f2}
+button:hover,.button:hover{background:#ff812e5e;border-color:#ffb56c;text-decoration:none}
+input,select,textarea{background:#080d16ed;border-color:#758291;color:#fff;border-radius:9px}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #ffac64;outline-offset:2px}
+.pill{background:#2819107a;color:#ffd1aa;border:1px solid #d5763f60}
+.auth{background:#111821c9;border:1px solid #aa5c284c;backdrop-filter:blur(5px)}
+.status{color:#ffd0ac}
+.calendar button{border-radius:7px;background:#1a2637c4;border:1px solid #688197;color:#fff}
+.calendar .selected{background:#d96c22;color:#fff;border-color:#ffc17d}
+@media(max-width:640px){main{padding:0 13px}.card{padding:14px;margin:11px 0}.grid{grid-template-columns:minmax(0,1fr);gap:12px}header{padding:12px 4%}nav{gap:10px}}
+@media(prefers-reduced-motion:reduce){button,.button{transition:none}}
