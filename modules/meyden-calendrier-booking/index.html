@@ -7,4 +7,36 @@ else if(type==='studios')form('Ajouter un professionnel',[['nom','Studio ou prof
 else if(type==='atlas')form('Ajouter une salle',[['nom','Salle'],['ville','Ville'],['capacite','Capacité'],['contact','Lien contact']]);
 else if(type==='dossier')form('Dossier et notes',[['projet','Projet'],['contact','Contact'],['prochaine','Prochaine étape'],['notes','Notes']]);
 else if(type==='cart'){form('Ajouter une prestation',[['service','Service'],['description','Description']]);const b=document.createElement('button');b.textContent='Copier le panier';el.append(b);b.onclick=async()=>{try{await navigator.clipboard.writeText(read().map(r=>r.service+': '+r.description).join('\n'));notice.textContent='Panier copié'}catch{notice.textContent='Copie indisponible dans ce navigateur'}}}
+</script><style>
+.meyden-tools{margin:24px 0;padding:16px;border:1px solid #9c542b;border-radius:14px;background:#11171d}
+.meyden-tools h2{margin:0 0 7px;font-size:1.25rem}
+.meyden-tools .meyden-actions{display:flex;gap:8px;flex-wrap:wrap}
+.meyden-tools button,.meyden-tools a{display:inline-block;background:#2a3038;color:#fff;border:1px solid #ff7d28;padding:10px 13px;border-radius:8px;text-decoration:none;cursor:pointer}
+.meyden-tools p{color:#b9b9b9;font-size:.88rem}
+</style><script>
+(function(){
+ const name=location.pathname.split('/').filter(Boolean).pop()||'meyden-module';
+ const key=Object.keys(localStorage).find(k=>k==='meyden-module-'+({ 'meyden-calendrier-booking':'calendar','meyden-bibliotheques':'library','meyden-profils-artistes':'artists','meyden-studios-metiers-art':'studios','meyden-atlas':'atlas','meyden-panier-central':'cart','meyden-dossier-client':'dossier'}[name]))||'meyden-module-'+name;
+ function read(){try{const data=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(data)?data:[]}catch{return[]}}
+ function info(msg){const x=document.getElementById('meyden-feedback');if(x)x.textContent=msg}
+ const root=document.querySelector('main')||document.body;
+ const area=document.createElement('section');area.className='meyden-tools';
+ area.innerHTML='<h2>Outils du module</h2><div class="meyden-actions"><button type="button" id="meyden-export">Exporter mes données</button><button type="button" id="meyden-ask">Ajouter au panier</button><a href="/modules/meyden-panier-central/">Ouvrir mon panier</a><a href="/ancien/">Outils historiques</a><a href="/">Retour au quartier</a></div><p id="meyden-feedback" role="status">Les données de ces formulaires restent dans ce navigateur. Exportez-les pour en conserver une copie.</p>';
+ root.appendChild(area);
+ document.getElementById('meyden-export').onclick=()=>{
+   const data={module:name,exportDate:new Date().toISOString(),entries:read()};
+   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+   const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name+'-export.json';a.click();URL.revokeObjectURL(url);
+   info('Exportation préparée.');
+ };
+ document.getElementById('meyden-ask').onclick=()=>{
+   if(name==='meyden-panier-central'){info('Vous êtes déjà dans le panier.');return}
+   let cart=[];try{cart=JSON.parse(localStorage.getItem('meyden-module-cart')||'[]')}catch{}
+   if(!Array.isArray(cart))cart=[];
+   const entries=read(),record=entries.length?entries[entries.length-1]:null;
+   const description=record?Object.entries(record).map(([k,v])=>k+': '+v).join(' — '):'Demande liée au module '+name;
+   cart.push({service:name,description});localStorage.setItem('meyden-module-cart',JSON.stringify(cart));
+   info('Dernière fiche ajoutée au panier commun.'); 
+ };
+})();
 </script></body></html>
